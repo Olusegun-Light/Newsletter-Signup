@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     { "src": "/(.*)", "dest": "/$1" },
     { "src": "/images/(.*)", "dest": "/images/$1" }
   ],
+  "builds": [
+    { "src": "app.js", "use": "@now/node-server" }
+  ],
+  "output": {
+    "dir": "public",
+    "clean": true,
+    "fallback": null
+  },
   "env": {
     "MY_ENV_VAR": "my-value"
   }
