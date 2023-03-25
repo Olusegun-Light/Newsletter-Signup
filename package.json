@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+     "start": "node app.js",
     "build": "npm-run-all --parallel build:*",
-    "build:app": "some-build-tool app.js -o public/app.js",
-    "build:images": "cp -R images/ public/"
+    "build:app": "some-build-tool app.js -o app.js",
+    "build:images": "cp -R images/ ."
   },
   "author": "Light",
   "license": "ISC",
